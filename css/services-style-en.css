@@ -1,0 +1,238 @@
+:root {
+    --primary: #1D3557;
+    --secondy: #457B9D;
+    --third: #A8DADC;
+    --fourth: #F1FAEE;
+    --fifth: #E63946;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: "dosis";
+    src: url(../fonts/Dosis-Regular.ttf);
+}
+
+@font-face {
+    font-family: "lora";
+    src: url(../fonts/Lora-Regular.ttf);
+}
+
+@font-face {
+    font-family: "monst";
+    src: url(../fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: "raleway";
+    src: url(../fonts/Raleway-Regular.ttf);
+}
+
+body{
+    background-color: var(--fourth) !important;
+    font-family: "raleway" !important;
+}
+
+.page{
+    padding: 0 4%;
+    background-color: var(--primary);
+    color: white !important;
+}
+
+.page h3{
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.page .logo h3::after
+,.page .logo h3::before{
+    content: "";
+        background: white;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+}
+
+.page .logo h3::before{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    bottom: -29px;
+    border: 4px solid var(--primary);
+    z-index: 1;
+}
+
+.page .logo h3::after{
+            width: 120px;        
+            height: 2px;        
+            bottom: -20px;
+}
+
+a{
+    color: #d4cfcf !important;
+}
+
+.active,
+a:hover{
+    color: white !important;
+}
+
+li:not(:last-child){
+    display: flex;
+    align-items: center;
+}
+
+span {
+    color: var(--fifth);
+}
+
+i{
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.lang{
+    text-align: center;
+}
+
+@media (max-width: 575.98px) {
+    .page{
+        padding: 1%;
+    }
+    .hide-mobile {
+        display: none !important;
+    }
+    i{
+        padding: 10px;
+    }
+
+    .page .logo h3::after {
+        width: 50px;
+    }
+    .page .logo h3::before {
+        width: 17px;
+        height: 17px;
+        bottom: -27px;
+    }
+}
+
+.content{
+    background-color: var(--secondy);
+    height: 50px;
+}
+
+.head{
+    margin: 30px auto !important;
+    text-align: center;
+    height: 50px !important;
+    width: 90% !important;
+    position: relative;
+}
+
+.anything{
+    text-transform: capitalize;
+}
+
+.head::before{
+    content: "";
+    width: 100%;
+    position: absolute;
+    left: 0;
+    height: 5px;
+    background-color: var(--secondy);
+}
+
+#head{
+    min-height: 130px !important;
+}
+
+.search{
+    position: relative;
+        display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+}
+
+input{
+    width: 90% !important;
+    margin: 10px !important;
+    padding: 10px !important;
+}
+
+table{
+    width: 100%;
+}
+
+th{
+    background: var(--primary);
+        color: var(--fourth);
+        text-transform: uppercase;
+        height: 50px;
+        position: relative;
+}
+
+td{
+    text-transform: capitalize;
+}
+
+th:first-child,td:first-child{
+    width: 40px;
+    padding: 0 5px 0;
+}
+
+#whatsapp {
+    position: fixed;
+    width: 5%;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    display: none;
+}
+
+/* th:not(:first-child),td:not(:first-child){
+    text-align: center !important;
+} */
+
+th:not(:first-child)::before{
+    content: "";
+        background: white;
+        width: 3px;
+        height: 50px;
+        position: absolute;
+        top: 0;
+        left: -10px;
+}
+tr{
+    padding: 10px !important
+}
+
+
+@media (max-width: 767.98px){
+    .col-3 {
+            width: 50% !important;
+            font-size: 14px;
+        }
+    
+        .head {
+            height: 80px !important;
+        }
+    
+        table {
+            font-size: 10px;
+        }
+    
+        th:not(:first-child)::before {
+            content: "";
+            display: none;
+        }
+}
